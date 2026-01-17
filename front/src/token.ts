@@ -12,7 +12,6 @@ export default class TokenManager {
     this.token = localStorage.getItem("userToken");
     
     if (this.token) {
-      // Vérifier si le token est expiré
       if (this.isTokenExpired(this.token)) {
         console.log("Token expired, removing it");
         this.removeToken();
